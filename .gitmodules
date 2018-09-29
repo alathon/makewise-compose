@@ -1,3 +1,0 @@
-[submodule "netcore-compose-test"]
-	path = netcore-compose-test
-	url = git@github.com:alathon/netcore-compose-test.git
