@@ -4,7 +4,6 @@ services:
     restart: always
     build:
       context: .
-      dockerfile: src/IAM/Dockerfile
       target: final
       args:
         - BUILD_ENV=Production
@@ -13,7 +12,6 @@ services:
     restart: always
     build:
       context: .
-      dockerfile: src/GiraffeWeb/Dockerfile
       target: final
       args:
         - BUILD_ENV=Production

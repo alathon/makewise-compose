@@ -4,13 +4,13 @@ services:
     container_name: iam-dbg
     build:
       context: .
-      dockerfile: src/IAM/Dockerfile
+      dockerfile: ../netcore-compose-test/src/IAM/Dockerfile
       target: dev
       args:
         - BUILD_ENV=Debug
     volumes:
-      - ./src/IAM:/build/src/IAM
-      - ./.paket:/build/.paket
+      - ../netcore-compose-test/src/IAM:/build/src/IAM
+      - ../netcore-compose-test/.paket:/build/.paket
 
   web:
     container_name: web-dbg
@@ -21,8 +21,8 @@ services:
       args:
         - BUILD_ENV=Debug
     volumes:
-      - ./src/GiraffeWeb:/build/src/GiraffeWeb
-      - ./.paket:/build/.paket
+      - ../netcore-compose-test/src/GiraffeWeb:/build/src/GiraffeWeb
+      - ../netcore-compose-test/.paket:/build/.paket
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
 
