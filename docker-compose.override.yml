@@ -3,8 +3,6 @@ services:
   iam:
     container_name: iam-dbg
     build:
-      context: .
-      dockerfile: ../netcore-compose-test/src/IAM/Dockerfile
       target: dev
       args:
         - BUILD_ENV=Debug
@@ -15,8 +13,6 @@ services:
   web:
     container_name: web-dbg
     build:
-      context: .
-      dockerfile: src/GiraffeWeb/Dockerfile
       target: dev
       args:
         - BUILD_ENV=Debug

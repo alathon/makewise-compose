@@ -3,7 +3,6 @@ services:
   iam:
     restart: always
     build:
-      context: .
       target: final
       args:
         - BUILD_ENV=Production
@@ -11,7 +10,6 @@ services:
   web:
     restart: always
     build:
-      context: .
       target: final
       args:
         - BUILD_ENV=Production
